@@ -6,18 +6,21 @@
 
 - Create an enviroment
 ```bash
-py -m venv <venv>
+$ py -m venv venv
 ```
 - Activate the enviroment
-```bash
-Windows:
-    .\<venv>\Scripts\activate
-Linux and Mac:
-    source /<venv>/bin/activate
-```
+
+    Windows:
+    ```bash
+        $ .\venv\Scripts\activate
+    ```
+    Linux and Mac:
+    ```bash
+        $ source /venv/bin/activate
+    ```
 - Install the necessary libraries
 ```bash
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 ## Example

@@ -23,7 +23,7 @@ args = [
     },
 
     'password': {
-      'command': '--pass',
+      'command': '--passw',
       'short': '-p',
       'required': False,
       'help': 'Password for authentication',

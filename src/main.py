@@ -1,5 +1,6 @@
 from argparse import ArgumentParser
 from var.args import args
+from controllers.request import req
 
 def define_args():
   """
@@ -20,3 +21,12 @@ def define_args():
 
   Args = p.parse_args()
   return Args
+
+def proc_args(args):
+  data = {
+    'n':args.new_user,
+    'a':args.auth,
+    'p':args.passw,
+  }
+  a = req(data)
+  return a

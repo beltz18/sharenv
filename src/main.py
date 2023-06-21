@@ -1,5 +1,5 @@
-from argparse import ArgumentParser
-from var.args import args
+from argparse            import ArgumentParser
+from var.args            import args
 from controllers.request import req
 
 def define_args():

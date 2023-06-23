@@ -31,4 +31,4 @@ $ pip install -r requirements.txt
 
 ## Links
 * docs: [ coming soon... ]
-* Source Code: https://github.com/beltz18/sharenv_withFriends
+* Source Code: https://github.com/beltz18/sharenv

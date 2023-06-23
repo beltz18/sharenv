@@ -1,5 +1,5 @@
 import main as m
 
-# Store the arguments into a varibale
-args = m.define_args()
-m.proc_args(args)
+# Initializes the CLI
+if __name__ == '__main__':
+  m.cli()

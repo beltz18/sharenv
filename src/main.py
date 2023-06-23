@@ -1,32 +1,22 @@
-from argparse import ArgumentParser
-from var.args import args
+from var.args            import args
 from controllers.request import req
+import click
 
-def define_args():
-  """
-  Defines arguments using the ArgumentParser module
-  """
-  p = ArgumentParser(description='Arguments for Sharenv')
+arg = [arg for arg in args]
 
-  for arg in args:
-    for a in arg.keys():
-      p.add_argument(
-        f'{arg[a]["command"]}',
-        f'{arg[a]["short"]}',
-        required=arg[a]['required'],
-        help=arg[a]['help'],
-        action=arg[a]['action'],
-        type=arg[a]['type'],
-      )
+@click.group()
+def cli():
+  pass
 
-  Args = p.parse_args()
-  return Args
-
-def proc_args(args):
+@cli.command('user')
+@click.option(args[arg[0]]['short'], args[arg[0]]['command'], help=args[arg[0]]['help'], type=args[arg[0]]['type'], required=args[arg[0]]['required'])
+@click.option(args[arg[1]]['short'], args[arg[1]]['command'], help=args[arg[1]]['help'], type=args[arg[1]]['type'], required=args[arg[1]]['required'])
+@click.option(args[arg[2]]['short'], args[arg[2]]['command'], help=args[arg[2]]['help'], type=args[arg[2]]['type'], required=args[arg[2]]['required'])
+def user(user,auth,pasw):
   data = {
-    'n':args.new_user,
-    'a':args.auth,
-    'p':args.passw,
+    'n': user,
+    'a': auth,
+    'p': pasw
   }
-  a = req(data)
-  return a
+  res = req(data)
+  print(res['message'])

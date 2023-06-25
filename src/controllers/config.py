@@ -33,5 +33,5 @@ def write_config(prop, val):
   """
   f = read_config()
   f[prop] = val
-  with open("./src/lib/_config.json", "w") as file:  
+  with open("./src/_config.json", "w") as file:  
     json.dump(f, file)

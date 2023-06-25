@@ -1,11 +1,30 @@
 import json
 import os
 
+# Default config
 default = {
-  'version': 'v0.3',
+  'version': 'v0.4',
+  'api': 'https://sharenv-api.onrender.com',
   'user': '',
-  'spaces': [],
+  'spaces': {
+    "spacesOwned": [],
+    "spacesInvited": []
+  },
   'files': []
+}
+
+# Data for requests
+dataReq = {
+  'n': None,
+  'a': None,
+  'p': None,
+  'c': None,
+  's': None,
+  'r': None,
+  'd': None,
+  'o': None,
+  'i': None,
+  'f': None,
 }
 
 def read_config():

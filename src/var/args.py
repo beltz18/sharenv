@@ -15,16 +15,16 @@ args = {
   },
 
   'space': { #1
-    'command': ['create', 'rename', 'delete', 'user', 'file', 'list'],
-    'short': ['-n', '-r', '-d', '-u', '-f', '-l'],
+    'command': ['create', 'add', 'rename', 'delete', 'user', 'file'],
+    'short': ['-n', '-s', '-r', '-d', '-i', '-f'],
     'required': False,
     'help': [
       'Receives a name and creates a space with that name',
+      'Receives a space to add a new member',
       'Rename the space given by name',
       'Delete the space with all the files inside',
-      'Add or remove users from spaces. If no argument is provided it will list them.',
-      'List all of your available files in that space',
-      'List all of your available spaces'
+      'Add or remove users from spaces',
+      'List all of your available files in that space'
     ],
     'default': 'list',
     'action': None,
@@ -39,5 +39,7 @@ args = {
     'default': None,
     'action': None,
     'type': str
-  }
+  },
+
+  'version': '' #3
 }
